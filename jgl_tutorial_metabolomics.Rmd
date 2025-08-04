@@ -5,9 +5,9 @@ knit: (function(input_file, encoding) {
     rmarkdown::render(input_file,
       encoding=encoding,
       output_file=file.path(dirname(input_file), out_dir, 'index.html'))})
-subtitle: "Presentation for UMass Amherst PhD Biostat Seminar 892a"
-author: "Margaret Janiczek, Ariane Stark"
-date: "4/1/2022"
+
+author: "Margaret Janiczek"
+
 output: 
   html_document:
     toc: true
@@ -436,7 +436,7 @@ inv_covar_matrices <- fgl_results$theta
 names(inv_covar_matrices) <- ancestry_groups
 
 
-test <- graph_from_adjacency_matrix(-cov2cor(inv_covar_matrices[[1]]))
+#test <- graph_from_adjacency_matrix(-cov2cor(inv_covar_matrices[[1]]))
 
 #now use `graph_from_adjacency_matrix()` function from igraph to create igraph graphs from adjacency matrices
 
